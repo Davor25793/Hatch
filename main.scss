@@ -291,6 +291,7 @@ ul{
 
 //PORTFOLIO
 .portfolio{
+  padding: 5rem 0;
   background: #eee;
 
   .title{
@@ -318,6 +319,25 @@ ul{
       background: #ffd322;
       color: #fff;
     }
+  } 
+
+
+  &-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-item{
+    margin: 1rem;
+
+    img{
+      transition: all .7s;
+
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
   }
 }
+
 
