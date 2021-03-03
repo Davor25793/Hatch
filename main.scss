@@ -24,6 +24,11 @@ ul{
   margin: 0 auto;
 }
 
+.line{
+  background: rgba(0,0,0, 0.1);
+  height: 3px;
+}
+
 //NAVBAR
 .navbar{
   height: 80px;
@@ -141,6 +146,16 @@ ul{
   }
 }
 
+.lead{
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-left: 3px solid #333;
+  display: inline-block;
+  padding-left: 10px;
+  margin: 8px 0;
+}
+
 //About
 .about{
   padding: 4rem 2rem;
@@ -157,15 +172,6 @@ ul{
     text-align: center;
   }
 
-  .lead{
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-left: 3px solid #333;
-    display: inline-block;
-    padding-left: 10px;
-    margin: 8px 0;
-  }
 
   &-items{
     display: flex;
@@ -211,9 +217,107 @@ ul{
       opacity: .9;
     }
   }
+
+  .focus{
+    display: flex;
+    padding: 5rem 3rem;
+    justify-content: center;
+    align-items: center;
+
+    &-img{
+      flex: 0 0 40%;
+
+      img{
+        width: 480px;
+        margin-right: 1rem;
+      }
+    }
+
+    &-content{
+      flex: 0 0 60%;
+
+      h3{
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        margin: 0 0 1rem 0;
+        font-family: 'Roboto', sans-serif;
+        
+      }
+
+      p{
+        font-size: 1.1rem;
+        font-weight: 300;
+      }
+    }
+
+    &-item{
+      width: 100%;
+
+      .focus-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0;
+
+        i{
+          font-size: 25px;
+          color: #333;
+        }
+      }
+
+      .focus-body{
+
+        .focus-line{
+          position: relative;
+          background: #eee;
+          height: 3px;
+          padding: 5px;
+          border-radius: 5px;
+          position: relative;
+
+          div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: orangered;
+            border-radius: 5px;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
-.line{
-  background: rgba(0,0,0, 0.2);
-  height: 3px;
+//PORTFOLIO
+.portfolio{
+  background: #eee;
+
+  .title{
+    text-align: center;
+  }
+
+  .btns-group{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    button{
+      display: inline-block;
+      border: none;
+      color: #333;
+      padding: .7rem 1.5rem;
+      cursor: pointer;
+      margin: 0 1rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .btn-active{
+      background: #ffd322;
+      color: #fff;
+    }
+  }
 }
+
