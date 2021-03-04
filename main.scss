@@ -772,7 +772,14 @@ ul{
 
   .portfolio .btns-group{
     grid-template-columns: 1fr;
+   
+    button{
+      display: block;
+      margin: 5px 0;
+      background: #fff;
+    }
   }
+  
   
 }
 
