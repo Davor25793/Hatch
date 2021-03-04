@@ -17,7 +17,6 @@ ul{
   list-style: none;
 }
 
-
 //Utilities
 .container{
   width: 90%;
@@ -27,6 +26,10 @@ ul{
 .line{
   background: rgba(0,0,0, 0.1);
   height: 3px;
+}
+
+.menu{
+  display: none;
 }
 
 //NAVBAR
@@ -39,7 +42,6 @@ ul{
   z-index: 10;
   background: #fff;
 
-
   &-container{
     display: flex;
     align-items: center;
@@ -51,7 +53,6 @@ ul{
     color: rgb(0,0,0);
     font-weight: 500;
   }
-
 
   .list{
     display: flex;
@@ -171,7 +172,6 @@ ul{
   .title{
     text-align: center;
   }
-
 
   &-items{
     display: flex;
@@ -327,7 +327,6 @@ ul{
     }
   } 
 
-
   &-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -349,7 +348,6 @@ ul{
 //TEAM
 .team{
   padding: 4rem 0;
-
 
   .title{
     text-align: center;
@@ -541,4 +539,240 @@ ul{
   font-size: 1.2rem;
 }
 
+//QUERIES
+@media(max-width:900px){
+  .navbar-container .list{
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 0 2.2rem;
+    transition: all .7s;
+    height: 0;
+
+    li{
+      padding: 10px 0;
+      transform: translateX(-200px);
+    }
+
+  }
+
+  .navbar-container .list.active{
+    height: 230px;
+    display: block;
+    transition: all .7s;
+
+    li{
+      animation: animate 2s ease .4s forwards;
+    }
+  }
+
+  @keyframes animate{
+    0%{
+      transform: translateX(-200px);
+    }
+
+    50%{
+      transform: translateX(50px);
+    }
+
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  .menu{
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    cursor: pointer;
+  }
+
+  .about .focus{
+    display: block;
+  }
+
+  .focus-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+}
+
+@media(max-width: 1350px){
+  .team-container{
+    display: block;
+
+    .card{
+      margin-bottom: 1.5rem;
+    }
+
+    .card img{
+      width: 100%;
+    }
+  }
+
+  .about-items{
+    display: block;
+
+    div{
+      text-align: center;
+
+    }
+
+    .btn{
+      margin: 1rem 0 3rem 0;
+    }
+  }
+
+}
+
+@media(max-width: 800px){
+  .contact-info-2{
+    display: block;
+    margin: 3rem 0;
+  }
+
+  #name, #email, #subject, textarea{
+   display: block;
+   width: 100%;
+   margin: 10px 0;
+  }
+
+}
+
+@media(max-width: 630px){
+  .showcase-content{
+    width: 400px;
+    height: 400px;
+  }
+
+  .showcase .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .showcase .title {
+    font-size: 2.8rem;
+  }
+
+}
+
+@media(max-width: 550px){
+  .portfolio .btns-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio .lead{
+    font-size: 1rem;
+  }
+
+  .contact-info-1{
+    display: block;
+
+    div{
+      margin: 20px 0;
+    }
+  }
+
+  .greet .social{
+
+    i{
+      font-size: 1rem;
+    }
+  }
+
+  .contact-info-3 .contact-btn{
+    width: 100%;
+  }
+
+  .about .focus-img img {
+    width: 350px;
+}
+}
+
+@media(max-width:400px){
+  .showcase-content{
+    height: 70%;
+  }
+
+  .about h1{
+    font-size: 2.2rem;
+  }
+
+  .about .focus-img img {
+    width: 300px;
+  }
+
+  .portfolio-container{
+    display: block;
+  }
+
+  .about .focus-content h3{
+    font-size: 2rem;
+  }
+
+  .portfolio .lead, .team .lead{
+    display: none;
+  }
+
+  .team{
+    padding: 2rem 0;
+  }
+
+  .footer{
+    font-size: 1rem;
+  }
+
+  .greet .social{
+    
+    i{
+      font-size: .9rem;
+    }
+  }
+
+  .about .focus-item .focus-head{
+    flex-direction: column;
+  }
+
+  .about .focus-content p{
+    width: 100%;
+  }
+
+  .about .container{
+    width: 100%;
+  }
+
+  .showcase-content{
+    width: 100%;
+  }
+
+  .portfolio{
+    padding: 2rem 0;
+  }
+  
+}
+
+@media(max-width: 320px){
+  .about .focus p{
+    display: none;
+  }
+
+  .about .focus-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .social i{
+    display: none;
+  }
+
+  .portfolio .btns-group{
+    grid-template-columns: 1fr;
+  }
+  
+}
 
